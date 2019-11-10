@@ -1,7 +1,7 @@
 package com.github.coneys.neys.app
 
 import android.app.Application
-import com.github.coneys.shoppinglist.ShoppingListComponent
+import com.github.coneys.shoppinglist.domain.ShoppingListComponent
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 

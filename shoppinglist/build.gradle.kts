@@ -26,4 +26,5 @@ tasks.withType<Test> {
 dependencies {
 
     testImplementation(TestDependencies.kotlinTestRunner)
+    testImplementation(TestDependencies.mockito_kotlin)
 }

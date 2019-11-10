@@ -1,14 +1,13 @@
-package com.github.coneys.shoppinglist
+package com.github.coneys.shoppinglist.domain
 
 import com.github.coneys.core.cast
-import com.github.coneys.shoppinglist.events.Event
-import com.github.coneys.shoppinglist.useCase.ShoppingListCreateUseCase
-import com.github.coneys.shoppinglist.useCase.ShoppingListService
+import com.github.coneys.shoppinglist.domain.create.CreateDomainEvent
+import com.github.coneys.shoppinglist.domain.create.CreateListDomainService
 import io.kotlintest.matchers.types.shouldBeInstanceOf
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.StringSpec
 
-class ShoppingListUseCaseTest : StringSpec() {
+class CreateListDomainTest : StringSpec() {
     init {
 
         "If name is not blank, shopping list should be created"{
@@ -16,7 +15,7 @@ class ShoppingListUseCaseTest : StringSpec() {
 
             val event = useCase.create("Test name")
 
-            event.shouldBeInstanceOf<Event.ShoppingListCreated>()
+            event.shouldBeInstanceOf<CreateDomainEvent.ShoppingListCreated>()
         }
 
         "If name is blank, shopping list should not be created"{
@@ -24,7 +23,7 @@ class ShoppingListUseCaseTest : StringSpec() {
 
             val event = useCase.create(" ")
 
-            event.shouldBeInstanceOf<Event.Failure>()
+            event.shouldBeInstanceOf<CreateDomainEvent.Failure>()
         }
 
         "If list is created, name should be same as input"{
@@ -35,11 +34,11 @@ class ShoppingListUseCaseTest : StringSpec() {
 
             val event = useCase.create(expectedName)
 
-            event.cast<Event.ShoppingListCreated>().shoppingList.name shouldBe expectedName
+            event.cast<CreateDomainEvent.ShoppingListCreated>().shoppingList.name shouldBe expectedName
         }
     }
 
-    private fun getUseCase(): ShoppingListCreateUseCase {
-        return ShoppingListService()
+    private fun getUseCase(): CreateListDomainService {
+        return CreateListDomainService()
     }
 }

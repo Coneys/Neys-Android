@@ -1,3 +1,3 @@
-package com.github.coneys.shoppinglist
+package com.github.coneys.shoppinglist.domain
 
 class ShoppingList(val id: ListId, val name: String)
