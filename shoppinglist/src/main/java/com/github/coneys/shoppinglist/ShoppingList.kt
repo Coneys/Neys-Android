@@ -1,3 +1,3 @@
 package com.github.coneys.shoppinglist
 
-class ShoppingList(val id: String, val name: String)
+class ShoppingList(val id: ListId, val name: String)

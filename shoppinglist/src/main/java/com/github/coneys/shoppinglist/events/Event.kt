@@ -1,8 +1,8 @@
 package com.github.coneys.shoppinglist.events
 
-import com.github.coneys.shoppinglist.ListId
+import com.github.coneys.shoppinglist.ShoppingList
 
-sealed class Event {
-    data class ShoppingListCreated(val listId: ListId) : Event()
+internal sealed class Event {
+    data class ShoppingListCreated(val shoppingList: ShoppingList) : Event()
     object Failure : Event()
 }
