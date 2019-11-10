@@ -15,6 +15,7 @@ internal class CreateListApplicationService(
     val repository: ShoppingListRepository
 ) :
     CreateListUseCase {
+
     override fun create(name: String): CreateApplicationEvent {
 
         return when (val creationResult = domainService.create(name)) {

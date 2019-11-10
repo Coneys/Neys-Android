@@ -14,7 +14,8 @@ dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation(project(":core"))
     implementation(project(":shoppingList:domain"))
-    implementation(project(":shoppingList:repository"))
+
+    api(project(":shoppingList:repository"))
 }
 
 tasks.withType<KotlinCompile> {

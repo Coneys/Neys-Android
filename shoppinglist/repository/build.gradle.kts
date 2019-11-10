@@ -13,6 +13,7 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation(project(":core"))
+    implementation(project(":shoppingList:domain"))
 }
 
 tasks.withType<KotlinCompile> {

@@ -1,4 +1,4 @@
-package com.github.coneys.shoppinglist.application.query
+package com.github.coneys.shoppinglist
 
 import com.github.coneys.shoppinglist.domain.ListId
 
