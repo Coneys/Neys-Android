@@ -1,6 +1,5 @@
-package com.github.coneys.shoppinglist.application
+package com.github.coneys.shoppinglist.application.create
 
-import com.github.coneys.shoppinglist.application.create.CreateApplicationEvent
 import com.github.coneys.shoppinglist.domain.ShoppingList
 import com.github.coneys.shoppinglist.domain.ShoppingListRepository
 import com.github.coneys.shoppinglist.domain.create.CreateDomainEvent
