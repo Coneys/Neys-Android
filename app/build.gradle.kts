@@ -35,7 +35,12 @@ android {
 }
 
 dependencies {
+
     implementation(project(":androidArchitecture"))
+    implementation(project(":core"))
+    implementation(project(":shoppingList"))
+
+    implementation(KoinDependencies.android)
 
 
     implementation(AndroidDependencies.appCompat)

@@ -11,8 +11,8 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib-jdk8"))
-    implementation(project(":core"))
+    api(kotlin("stdlib-jdk8"))
+    api(KoinDependencies.core)
 }
 
 tasks.withType<KotlinCompile> {
