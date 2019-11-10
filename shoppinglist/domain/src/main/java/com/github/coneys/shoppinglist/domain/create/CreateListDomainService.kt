@@ -4,7 +4,7 @@ import com.github.coneys.shoppinglist.domain.ListId
 import com.github.coneys.shoppinglist.domain.ShoppingList
 
 
-internal open class CreateListDomainService {
+open class CreateListDomainService {
     open fun create(name: String): CreateDomainEvent {
 
         if (name.isBlank()) return CreateDomainEvent.Failure

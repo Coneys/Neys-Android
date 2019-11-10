@@ -38,7 +38,7 @@ dependencies {
 
     implementation(project(":androidArchitecture"))
     implementation(project(":core"))
-    implementation(project(":shoppingList"))
+    implementation(project(":shoppingList:application"))
 
     implementation(KoinDependencies.android)
 

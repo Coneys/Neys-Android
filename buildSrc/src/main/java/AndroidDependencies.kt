@@ -14,7 +14,7 @@ object AndroidDependencies {
         val ktx = "1.0.2"
         val material = "1.1.0-alpha10"
         val appCompat = "1.1.0-rc01"
-        val constraintLayout = "2.0.0-beta1"
+        val constraintLayout = "2.0.0-beta3"
         val lifecycle = "2.0.0"
         val navigation = "2.1.0"
     }

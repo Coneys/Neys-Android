@@ -1,4 +1,4 @@
 rootProject.name='Neys'
-include ':app', ':shoppingList'
+include ':app', ':shoppingList:domain',':shoppingList:repository', ':shoppingList:application'
 include ':androidArchitecture'
 include ':core'
