@@ -16,6 +16,7 @@
 
         <item name="backgroundColor">@color/lightGray</item>
 
+        <item name="colorError">@color/red</item>
 
         <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Neys.SmallComponent</item>
         <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Neys.MediumComponent</item>
