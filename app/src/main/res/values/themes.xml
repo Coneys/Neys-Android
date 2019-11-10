@@ -1,0 +1,26 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/brandBrown</item>
+        <item name="colorPrimaryDark">@color/brandBrownDark</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <item name="colorAccent">@color/brandOrange</item>
+
+        <item name="colorSecondary">@color/brandOrange</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnSurface">@color/colorSurface</item>
+
+        <item name="backgroundColor">@color/lightGray</item>
+
+
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Neys.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Neys.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Neys.LargeComponent</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,3 @@
+rootProject.name='Neys'
+include ':app', ':shoppingList'
+include ':androidArchitecture'

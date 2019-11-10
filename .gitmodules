@@ -1,0 +1,3 @@
+[submodule "Neys-Transfer-Data"]
+	path = Neys-Transfer-Data
+	url = git@github.com:Coneys/Neys-Transfer-Data.git
