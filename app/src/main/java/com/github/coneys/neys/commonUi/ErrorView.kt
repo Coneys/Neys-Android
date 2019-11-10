@@ -10,4 +10,8 @@ class ErrorView(context: Context?, attrs: AttributeSet?) : MaterialCardView(cont
     init {
         layoutInflater.inflate(R.layout.view_error, this, true)
     }
+
+    fun render(iconRes: Int, messageRes: Int) {
+
+    }
 }

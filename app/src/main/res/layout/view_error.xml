@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_error_root"
     android:layout_width="wrap_content"
+    android:visibility="gone"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    app:shapeAppearance="?shapeAppearanceMediumComponent"
-    tools:parentTag="com.google.android.material.card.MaterialCardView">
+    app:shapeAppearance="?shapeAppearanceMediumComponent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="200dp"
@@ -39,4 +39,4 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</merge>
+</com.google.android.material.card.MaterialCardView>

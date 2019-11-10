@@ -48,6 +48,7 @@ dependencies {
     implementation(AndroidDependencies.viewModel)
     implementation(AndroidDependencies.lifecycleExtensions)
     implementation(AndroidDependencies.material)
+    implementation(AndroidDependencies.ktx)
 
     implementation(RetrofitDependencies.retrofit)
     implementation(RetrofitDependencies.moshiConverter)
@@ -59,6 +60,11 @@ dependencies {
     implementation(KotlinDependencies.std)
 
     testImplementation (TestDependencies.kotlinTestRunner)
+
+
+    /*Views*/
+    implementation("com.jaredrummler:animated-svg-view:1.0.6")
+
 
 
 }
