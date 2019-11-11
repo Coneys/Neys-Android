@@ -5,6 +5,7 @@ import com.github.coneys.androidArchitecture.viewModel.BaseScopedViewModel
 import com.github.coneys.neys.shoppingList.viewData.ShoppingListViewResult
 import com.github.coneys.neys.shoppingList.viewData.ShoppingListViewState
 import com.github.coneys.shoppinglist.dao.ShoppingListViewDao
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class ShoppingListIntroViewModel(private val dao: ShoppingListViewDao) : BaseScopedViewModel() {
@@ -31,6 +32,8 @@ class ShoppingListIntroViewModel(private val dao: ShoppingListViewDao) : BaseSco
 
     fun loadInitial() {
         launch {
+            mutableResultSubject.post(ShoppingListViewResult.Loading)
+            delay(3000)
             val headers = dao.getAllHeaders()
             mutableResultSubject.post(ShoppingListViewResult.ShoppingLists(headers))
         }

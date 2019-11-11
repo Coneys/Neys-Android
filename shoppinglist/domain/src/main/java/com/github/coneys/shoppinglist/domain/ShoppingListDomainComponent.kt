@@ -1,4 +1,4 @@
-package com.github.coneys.shoppinglist
+package com.github.coneys.shoppinglist.domain
 
 import com.github.coneys.core.Component
 import org.koin.core.module.Module
