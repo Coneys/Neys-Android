@@ -5,6 +5,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LifecycleRegistry
 import androidx.lifecycle.ViewModel
 import com.github.coneys.androidArchitecture.Main
+import com.github.coneys.androidArchitecture.blockScope.LoggingFunctionBlock
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlin.coroutines.CoroutineContext
@@ -14,6 +15,7 @@ abstract class BaseScopedViewModel : ViewModel(), CoroutineScope, LifecycleOwner
     internal var wasStarted = false
     private val job = Job()
     private val lifeRegistry = LifecycleRegistry(this)
+    private val functionBlockScope = LoggingFunctionBlock()
 
     override val coroutineContext: CoroutineContext = job + Main
     override fun getLifecycle() = lifeRegistry
@@ -27,5 +29,9 @@ abstract class BaseScopedViewModel : ViewModel(), CoroutineScope, LifecycleOwner
         job.cancel()
         lifeRegistry.handleLifecycleEvent(Lifecycle.Event.ON_DESTROY)
         super.onCleared()
+    }
+
+    fun executeOnce(tag: String, lambda: () -> Unit) {
+        functionBlockScope.executeOnce(tag, lambda)
     }
 }

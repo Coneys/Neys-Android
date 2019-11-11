@@ -1,6 +1,6 @@
 package com.github.coneys.androidArchitecture
 
-import com.github.coneys.androidArchitecture.publisher.LiveSubject
+import com.github.coneys.androidArchitecture.subject.LiveSubject
 
 
 class LiveSubjectTest : LiveTest() {

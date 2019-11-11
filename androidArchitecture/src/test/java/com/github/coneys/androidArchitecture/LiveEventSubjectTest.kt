@@ -1,6 +1,6 @@
 package com.github.coneys.androidArchitecture
 
-import com.github.coneys.androidArchitecture.publisher.LiveEventSubject
+import com.github.coneys.androidArchitecture.subject.LiveEventSubject
 
 
 class LiveEventSubjectTest : LiveTest() {
@@ -27,6 +27,7 @@ class LiveEventSubjectTest : LiveTest() {
             test.assertEmpty()
 
         }
+
 
     }
 }
