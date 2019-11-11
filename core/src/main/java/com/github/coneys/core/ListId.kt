@@ -1,4 +1,4 @@
-package com.github.coneys.shoppinglist.domain
+package com.github.coneys.core
 
 import java.util.*
 

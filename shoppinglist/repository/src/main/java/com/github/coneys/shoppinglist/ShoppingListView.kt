@@ -1,5 +1,5 @@
 package com.github.coneys.shoppinglist
 
-import com.github.coneys.shoppinglist.domain.ListId
+import com.github.coneys.core.ListId
 
 class ShoppingListView(val id: ListId, val name: String)

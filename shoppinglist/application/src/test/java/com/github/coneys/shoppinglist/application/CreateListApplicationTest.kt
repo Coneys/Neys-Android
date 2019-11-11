@@ -3,7 +3,7 @@ package com.github.coneys.shoppinglist.application
 import com.github.coneys.shoppinglist.application.create.CreateApplicationEvent
 import com.github.coneys.shoppinglist.application.create.CreateListApplicationService
 import com.github.coneys.shoppinglist.application.create.CreateListUseCase
-import com.github.coneys.shoppinglist.domain.ListId
+import com.github.coneys.core.ListId
 import com.github.coneys.shoppinglist.domain.ShoppingList
 import com.github.coneys.shoppinglist.domain.ShoppingListRepository
 import com.github.coneys.shoppinglist.domain.create.CreateDomainEvent

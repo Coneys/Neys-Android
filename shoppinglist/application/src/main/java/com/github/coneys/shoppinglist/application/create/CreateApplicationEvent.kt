@@ -1,6 +1,6 @@
 package com.github.coneys.shoppinglist.application.create
 
-import com.github.coneys.shoppinglist.domain.ListId
+import com.github.coneys.core.ListId
 
 sealed class CreateApplicationEvent {
     data class ShoppingListCreated(val listId: ListId) : CreateApplicationEvent()

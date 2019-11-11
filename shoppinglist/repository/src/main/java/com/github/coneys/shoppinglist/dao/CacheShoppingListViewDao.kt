@@ -1,7 +1,7 @@
 package com.github.coneys.shoppinglist.dao
 
 import com.github.coneys.shoppinglist.ShoppingListView
-import com.github.coneys.shoppinglist.domain.ListId
+import com.github.coneys.core.ListId
 
 internal class CacheShoppingListViewDao : ShoppingListViewDao {
 
@@ -21,7 +21,7 @@ internal class CacheShoppingListViewDao : ShoppingListViewDao {
         map[id] = this
     }
 
-    override suspend fun getAll(): Collection<ShoppingListView> {
+    override suspend fun getAllHeaders(): Collection<ShoppingListView> {
         return map.values
     }
 }

@@ -58,6 +58,7 @@ dependencies {
     implementation(AndroidDependencies.navigationUi)
 
     implementation(KotlinDependencies.std)
+    implementation("pl.amistad.library:lists:2.2.1")
 
     testImplementation (TestDependencies.kotlinTestRunner)
 
