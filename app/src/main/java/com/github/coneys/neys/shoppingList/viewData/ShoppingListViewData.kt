@@ -4,7 +4,7 @@ import com.github.coneys.androidArchitecture.ViewResult
 import com.github.coneys.androidArchitecture.error.ApplicationError
 import com.github.coneys.androidArchitecture.viewData.LoadViewState
 import com.github.coneys.neys.shoppingList.listViews.ShoppingListRow
-import com.github.coneys.shoppinglist.ShoppingListView
+import com.github.coneys.shoppinglist.ShoppingListHeader
 
 
 data class ShoppingListViewState(
@@ -16,7 +16,7 @@ data class ShoppingListViewState(
     LoadViewState(showSuccess, error, showLoading)
 
 sealed class ShoppingListViewResult : ViewResult<ShoppingListViewState> {
-    class ShoppingLists(private val lists: Collection<ShoppingListView>) :
+    class ShoppingLists(private val lists: Collection<ShoppingListHeader>) :
         ShoppingListViewResult() {
         override fun toViewState(lastState: ShoppingListViewState): ShoppingListViewState {
             return lastState.copy(
