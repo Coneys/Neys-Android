@@ -1,18 +1,18 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="NeysTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
 
         <item name="colorPrimary">@color/brandBrown</item>
         <item name="colorPrimaryDark">@color/brandBrownDark</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
 
         <item name="colorAccent">@color/brandOrange</item>
 
         <item name="colorSecondary">@color/brandOrange</item>
         <item name="colorOnSecondary">@color/white</item>
 
-        <item name="colorSurface">@color/colorSurface</item>
-        <item name="colorOnSurface">@color/colorSurface</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/black</item>
 
         <item name="backgroundColor">@color/lightGray</item>
 

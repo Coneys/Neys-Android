@@ -2,7 +2,7 @@
 
     <style name="ShapeAppearance.Neys.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">cut</item>
-        <item name="cornerSize">4dp</item>
+        <item name="cornerSize">8dp</item>
     </style>
 
     <style name="ShapeAppearance.Neys.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
