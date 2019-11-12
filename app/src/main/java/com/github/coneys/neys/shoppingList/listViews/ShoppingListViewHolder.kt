@@ -7,7 +7,10 @@ import pl.amistad.library.lists.recyclerView.normal.BaseViewHolder
 class ShoppingListViewHolder(itemView: View) : BaseViewHolder<ShoppingListRow>(itemView)
 {
     override fun bind(position: Int, entity: ShoppingListRow) {
-        itemView.row_shopping_list_header_name.text = entity.shoppingListHeader.name
+        val header = entity.shoppingListHeader
+        itemView.row_shopping_list_header_name.text = header.name
+        itemView.row_shopping_list_header_active.setImageResource(entity.icon)
+
     }
 
 }

@@ -15,7 +15,7 @@ android {
 
     compileSdkVersion(ApplicationVariables.compileSdk)
     defaultConfig {
-        applicationId = "com.github.coneys.cookking"
+        applicationId = "com.github.coneys.neys"
         minSdkVersion(ApplicationVariables.minSdk)
         targetSdkVersion(ApplicationVariables.targetSdk)
         versionCode = 1
