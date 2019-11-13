@@ -6,6 +6,7 @@ import com.github.coneys.shoppinglist.ShoppingListHeader
 internal class CacheShoppingListViewDao : ShoppingListViewDao {
 
 
+
     private val map: HashMap<ListId, ShoppingListHeader> = HashMap()
 
     init {
@@ -13,8 +14,12 @@ internal class CacheShoppingListViewDao : ShoppingListViewDao {
     }
 
     private fun addInitialValues() {
-        ShoppingListHeader(ListId.generate(), "Tesco", 15, false).add()
-        ShoppingListHeader(ListId.generate(), "Castorama", 3, true).add()
+        ShoppingListHeader(ListId.generate(), "Tesco",  false).add()
+        ShoppingListHeader(ListId.generate(), "Castorama", true).add()
+    }
+
+    override suspend fun save(header: ShoppingListHeader) {
+        header.add()
     }
 
     private fun ShoppingListHeader.add() {

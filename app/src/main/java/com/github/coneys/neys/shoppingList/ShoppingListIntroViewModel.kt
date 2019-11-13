@@ -31,12 +31,22 @@ class ShoppingListIntroViewModel(private val dao: ShoppingListViewDao) : BaseSco
     }
 
     fun loadInitial() {
+        executeOnce("loadInitial"){
+            launch {
+                mutableResultSubject.post(ShoppingListViewResult.Loading)
+                delay(1000)
+                val headers = dao.getAllHeaders()
+                mutableResultSubject.post(ShoppingListViewResult.ShoppingLists(headers))
+            }
+        }
+    }
+
+    fun reloadHeaders(){
         launch {
-            mutableResultSubject.post(ShoppingListViewResult.Loading)
-            delay(3000)
             val headers = dao.getAllHeaders()
             mutableResultSubject.post(ShoppingListViewResult.ShoppingLists(headers))
         }
+
     }
 
 }

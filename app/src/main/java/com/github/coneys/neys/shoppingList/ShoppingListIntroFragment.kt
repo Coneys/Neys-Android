@@ -8,6 +8,7 @@ import com.github.coneys.androidArchitecture.error.ApplicationError
 import com.github.coneys.neys.R
 import com.github.coneys.neys.shoppingList.listViews.ShoppingListViewHolderManager
 import com.github.coneys.neys.shoppingList.viewData.ShoppingListViewState
+import com.github.coneys.shoppinglist.application.create.CreateApplicationEvent
 import kotlinx.android.synthetic.main.fragment_shopping_list_intro.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -22,6 +23,24 @@ class ShoppingListIntroFragment : Fragment(R.layout.fragment_shopping_list_intro
         setupRecycler()
 
         setupViewModel()
+
+        setupEventListener()
+    }
+
+    private fun setupEventListener() {
+        CreateApplicationEventBus.subject.observe(viewLifecycleOwner, ::resolveEvent)
+    }
+
+    private fun resolveEvent(event: CreateApplicationEvent) {
+        when (event) {
+            is CreateApplicationEvent.ShoppingListCreated -> {
+                shoppingListIntroViewModel.reloadHeaders()
+            }
+            CreateApplicationEvent.CouldNotCreateList -> {
+            }
+            CreateApplicationEvent.CouldNotSaveList -> {
+            }
+        }
     }
 
     private fun setupRecycler() {
@@ -48,7 +67,7 @@ class ShoppingListIntroFragment : Fragment(R.layout.fragment_shopping_list_intro
     }
 
     private fun renderError(error: ApplicationError) {
-        shopping_list_intro_state_view.showError(R.drawable.ic_error,R.string.app_name)
+        shopping_list_intro_state_view.showError(R.drawable.ic_error, R.string.app_name)
     }
 
     private fun renderLoading() {

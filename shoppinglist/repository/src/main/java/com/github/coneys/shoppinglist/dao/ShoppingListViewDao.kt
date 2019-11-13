@@ -4,4 +4,5 @@ import com.github.coneys.shoppinglist.ShoppingListHeader
 
 interface ShoppingListViewDao {
     suspend fun getAllHeaders(): Collection<ShoppingListHeader>
+    suspend fun save(header: ShoppingListHeader)
 }

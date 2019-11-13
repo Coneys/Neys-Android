@@ -6,7 +6,7 @@ import com.github.coneys.shoppinglist.domain.create.CreateDomainEvent
 import com.github.coneys.shoppinglist.domain.create.CreateListDomainService
 
 interface CreateListUseCase {
-    fun create(name: String): CreateApplicationEvent
+    suspend fun create(name: String): CreateApplicationEvent
 }
 
 internal class CreateListApplicationService(
@@ -15,7 +15,7 @@ internal class CreateListApplicationService(
 ) :
     CreateListUseCase {
 
-    override fun create(name: String): CreateApplicationEvent {
+    override suspend  fun create(name: String): CreateApplicationEvent {
 
         return when (val creationResult = domainService.create(name)) {
             is CreateDomainEvent.ShoppingListCreated -> saveList(creationResult.shoppingList)
@@ -25,7 +25,7 @@ internal class CreateListApplicationService(
 
     }
 
-    private fun saveList(shoppingList: ShoppingList): CreateApplicationEvent {
+    private suspend  fun saveList(shoppingList: ShoppingList): CreateApplicationEvent {
         return try {
             repository.save(shoppingList)
             CreateApplicationEvent.ShoppingListCreated(shoppingList.id)

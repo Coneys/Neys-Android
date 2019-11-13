@@ -1,6 +1,7 @@
 package com.github.coneys.neys.shoppingList
 
 import com.github.coneys.core.Component
+import com.github.coneys.neys.shoppingList.create.CreateListViewModel
 import com.github.coneys.shoppinglist.application.ShoppingListComponent
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
@@ -10,6 +11,7 @@ object ShoppingListAppComponent : Component {
 
     private val listModule = module {
         viewModel { ShoppingListIntroViewModel(get()) }
+        viewModel { CreateListViewModel(get()) }
     }
 
     override fun gatherModules(): List<Module> {

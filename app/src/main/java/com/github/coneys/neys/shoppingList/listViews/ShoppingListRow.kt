@@ -7,7 +7,7 @@ import pl.amistad.library.baseEntity.IdentifiableEntity
 
 class ShoppingListRow(val shoppingListHeader: ShoppingListHeader) : IdentifiableEntity {
     override fun equalsById(other: IdentifiableEntity): Boolean {
-        return shoppingListHeader.optionalCast<ShoppingListRow>()?.shoppingListHeader?.id == shoppingListHeader.id
+        return other.optionalCast<ShoppingListRow>()?.shoppingListHeader?.id == shoppingListHeader.id
     }
 
     val icon = if(shoppingListHeader.isFinished) R.drawable.ic_cart_finished else R.drawable.ic_cart_not_finished
